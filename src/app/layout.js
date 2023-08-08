@@ -1,7 +1,11 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { TopNavigation } from "./dashboard/components/TopNavigation";
+import Providers from "./state/services/providers";
+import theme from "./styles/theme";
+
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,7 +18,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <meta property="og:image" content="favicon.ico" />
+      <meta name="title" content="Music app" />
+      <meta property="og:title" content="Music app" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:url"
+        content="https://react-music-app-liart.vercel.app/"
+      />
+
+      <body style={{ background: "#F9FAFE" }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <TopNavigation />
+          <Providers>{children}</Providers>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
