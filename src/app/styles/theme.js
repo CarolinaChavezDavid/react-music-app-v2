@@ -25,7 +25,7 @@ const theme = createTheme({
       lineHeight: 1.375,
     },
     h2: {
-      color: "#F5F5FA",
+      color: "#00002D",
       fontSize: 38,
       lineHeight: 1.45,
     },
@@ -35,12 +35,10 @@ const theme = createTheme({
       lineHeight: 1.75,
     },
     h4: {
-      color: "#F5F5FA",
       fontSize: 18,
       lineHeight: 1.75,
     },
     h6: {
-      color: "#F5F5FA",
       fontSize: 16,
       lineHeight: 1.75,
     },

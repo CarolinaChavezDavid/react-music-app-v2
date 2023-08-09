@@ -2,7 +2,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Inter } from "next/font/google";
-import { TopNavigation } from "./dashboard/components/TopNavigation";
 import Providers from "./state/services/providers";
 import theme from "./styles/theme";
 
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
       <body style={{ background: "#F9FAFE" }}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <TopNavigation />
           <Providers>{children}</Providers>
         </ThemeProvider>
       </body>
