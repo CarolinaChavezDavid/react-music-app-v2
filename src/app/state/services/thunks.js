@@ -1,6 +1,7 @@
 import { getTrackList } from "../../api/getTopTracksAPI";
 import { updateCountryList } from "../countryTracksSlice";
 import { addTrack, removeTrack } from "../favoritesTracksSlice";
+import { setCurrentTrack } from "../playingTrackSlice";
 import { setIsFavorite, setTrack } from "../trackSlice";
 
 export const setTrackDetailInformation = (track) => {
@@ -12,6 +13,12 @@ export const setTrackDetailInformation = (track) => {
 export const setTrackIsFavorite = () => {
   return async (dispatch) => {
     dispatch(setIsFavorite());
+  };
+};
+
+export const setPlayingTrack = (track) => {
+  return async (dispatch) => {
+    dispatch(setCurrentTrack(track));
   };
 };
 

@@ -1,22 +1,20 @@
-import { Grid, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import ImageShadow from "react-image-shadow";
 import "react-image-shadow/assets/index.css";
+import { IndexText, SubtitleText } from "../../styles/fontStyles";
 
 export const TrackCardV2 = ({ track }) => {
   console.log("trackName", track.name);
+
+  const handelUpdate = () => {
+    dispatch(setPlayingTrack(track));
+  };
+
   return (
-    <Grid container direction="column" sx={{ padding: "1rem" }}>
-      <Grid item>
-        <ImageShadow shadowRadius={20} src={track.album.imageUrl} />
-      </Grid>
-      <Grid item>
-        <Typography variant="h6" sx={{ mt: "2rem" }}>
-          {track.name}
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="h6">{track.artists[0].name}</Typography>
-      </Grid>
-    </Grid>
+    <Box sx={{ width: 300, m: "1rem" }} onClick={handelUpdate}>
+      <ImageShadow shadowRadius={20} src={track.album.imageUrl} />
+      <IndexText sx={{ mt: "2rem" }}>{track.name}</IndexText>
+      <SubtitleText>{track.artists[0].name}</SubtitleText>
+    </Box>
   );
 };

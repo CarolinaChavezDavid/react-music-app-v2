@@ -20,7 +20,7 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Gugi-Regular", "sans-serif"].join(","),
     h1: {
-      color: "#F5F5FA",
+      color: "#00002D",
       fontSize: 50,
       lineHeight: 1.375,
     },
@@ -30,7 +30,7 @@ const theme = createTheme({
       lineHeight: 1.45,
     },
     h3: {
-      color: "#F5F5FA",
+      color: "#00002D",
       fontSize: 20,
       lineHeight: 1.75,
     },

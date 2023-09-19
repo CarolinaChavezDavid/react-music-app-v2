@@ -23,6 +23,10 @@ export default function Page() {
   const [country, setCountry] = useState(countriesListId[0]);
   const [query, setQuery] = useState("");
 
+  const sum = (caro1, caro2) => {
+    console.log(`el resultado es: ${caro1 + caro2}`);
+  };
+
   const updateCountryInfo = (countryInfo) => {
     setCountry(countryInfo);
     dispatch(updateCountryTracksList(country.playListID));
